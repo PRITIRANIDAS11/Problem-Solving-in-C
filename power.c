@@ -1,31 +1,18 @@
 #include <stdio.h>
-int main()
+
+int power(int a, int b)
 {
-    int number, power_value;
-    scanf("%d %d", &number, &power_value);
-
     int result = 1;
-
-    for (int i = 1; i <= power_value; i++)
+    for (int i = 1; i <= b; i++)
     {
-        result = result * number;
+        result = result * a;
     }
-    printf("result = %d", result);
-    return 0;
+    return result;
 }
 
-// OR,
-
-// #include <stdio.h>
-// #include <math.h>
-
-// int main()
-// {
-//     int a, b;
-//     scanf("%d %d", &a, &b);
-
-//     int c = pow(a, b);
-
-//     printf("%d", c);
-//     return 0;
-// }
+int main()
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d ^ %d = %d\n", a, b, power(a, b));
+}
